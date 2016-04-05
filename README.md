@@ -5,7 +5,7 @@ Django-CMS plugin for [slik carousel](http://kenwheeler.github.io/slick/).
 ```
 pip install git+https://github.com/Atterratio/cmsplugin-slick.git
 ```
-Then add `cmsplugin_slick` to `INSTALLED_APPS` an run `manage.py migrate`
+Then add `cmsplugin_slick` to `INSTALLED_APPS` and run `manage.py migrate`
 
 ##Components and Usage
 Module `Slick Carousel` contains the following plugins `Carousel Plugin`, `Plugins Wrapper`, `Image Folder Carousel`
