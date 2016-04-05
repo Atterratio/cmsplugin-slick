@@ -1,0 +1,18 @@
+{% load cms_tags sekizai_tags staticfiles %}
+
+<div id="carousel-slick-{{ instance.id }}" class="carousel-slick {{ instance.classes }}">
+	{% for plugin in instance.child_plugin_instances %}
+		{% render_plugin plugin %}
+    {% endfor %}
+</div>
+
+{% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick.css' %}>{% endaddtoblock %}
+{% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick-theme.css' %}>{% endaddtoblock %}
+{% addtoblock 'js' %}<script type="text/javascript" src={% static 'cmsplugin_slick/slick.js' %}></script>{% endaddtoblock %}
+{% addtoblock 'js' %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#carousel-slick-{{ instance.id }}').slick({{ slick_settings|safe }});
+	});
+</script>
+{% endaddtoblock %}

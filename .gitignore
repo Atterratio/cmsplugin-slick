@@ -1,0 +1,8 @@
+#Eclipse & PyDev
+.project
+.pydevproject
+.settings/
+
+#Python
+__pycache__/
+*.pyc

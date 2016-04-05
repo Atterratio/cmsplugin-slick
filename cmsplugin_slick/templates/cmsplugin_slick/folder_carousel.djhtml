@@ -1,0 +1,5 @@
+{% load thumbnail %}
+
+{% for image in folder_images %}
+    <img src="{{ image.image.url }}" alt="{{ image.label }}">
+{% endfor %}
