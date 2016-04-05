@@ -1,5 +1,4 @@
 #cmsplugin-slick
------
 Django-CMS plugin for [slik carousel](http://kenwheeler.github.io/slick/).
 ##Install
 ```
