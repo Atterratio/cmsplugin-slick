@@ -14,7 +14,7 @@ Module `Slick Carousel` contains the following plugins `Carousel Plugin`, `Plugi
 Allow add Django-CMS plugin like one slide, ore multislide if plugin return not wrapped list of ellements, see my plugin `Image Folder Carousel`
 
 ###Plugins Wrapper
-Alolow wrapp several Django-CMS plugins like one slide. For example you can add to this plugin `text` and `image` plugis, and text will be like title for image.
+Allow wrapp several Django-CMS plugins like one slide. For example you can add `text` and `image` plugis, and text will be like title for image.
 
 ###Image Folder Carousel
 Returns images from `filer` folder as carousel slides
