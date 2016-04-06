@@ -7,7 +7,9 @@
 </div>
 
 {% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick.css' %}>{% endaddtoblock %}
-{% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick-theme.css' %}>{% endaddtoblock %}
+{% if instance.default_style %}
+	{% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick-theme.css' %}>{% endaddtoblock %}
+{% endif %}
 {% addtoblock 'js' %}<script type="text/javascript" src={% static 'cmsplugin_slick/slick.js' %}></script>{% endaddtoblock %}
 {% addtoblock 'js' %}
 <script type="text/javascript">

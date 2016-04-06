@@ -14,6 +14,8 @@ class Carousel(CMSPlugin):
     #None
     title = models.CharField(verbose_name=_('Title'), max_length=60, blank=True)
     
+    default_style = models.BooleanField(verbose_name=_('Use default style'), default=True)
+    
     infinite = models.BooleanField(verbose_name=_('Infinite'), default=True)
     
     speed = models.IntegerField(verbose_name=_('Speed'), default=300)

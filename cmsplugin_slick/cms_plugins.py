@@ -27,6 +27,7 @@ class CarouselPlugin(CMSPluginBase):
     fieldsets = (
         (None, {'fields': (
                 'title',
+                'default_style',
                 'infinite',
                 'speed',
                 ('dots', 'arrows'),
