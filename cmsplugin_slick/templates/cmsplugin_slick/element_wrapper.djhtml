@@ -3,5 +3,5 @@
 <div class="carousel-slick-plugins-wrapper {{ instance.classes }}">
 	{% for plugin in instance.child_plugin_instances %}
 		{% render_plugin plugin %}
-    {% endfor %}
+  {% endfor %}
 </div>

@@ -1,20 +1,36 @@
 {% load cms_tags sekizai_tags staticfiles %}
+{% spaceless %}
 
-<div id="carousel-slick-{{ instance.id }}" class="carousel-slick {{ instance.classes }}">
+<div 
+  id="carousel-slick-{{ instance.id }}" 
+  class="carousel-slick {{ instance.classes }} slick-outwards"
+  >
 	{% for plugin in instance.child_plugin_instances %}
 		{% render_plugin plugin %}
-    {% endfor %}
+  {% endfor %}
 </div>
 
-{% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick.css' %}>{% endaddtoblock %}
-{% if instance.default_style %}
-	{% addtoblock 'css' %}<link rel="stylesheet" href={% static 'cmsplugin_slick/slick-theme.css' %}>{% endaddtoblock %}
+
+{% if instance.height %}
+<style>
+  #carousel-slick-{{ instance.id }} {
+    height: {{ instance.height }}px;
+  }
+  #carousel-slick-{{ instance.id }} .slick-slide {
+    height: {{ instance.height }}px;
+  }
+  #carousel-slick-{{ instance.id }} img {
+    display: block;
+    width: auto;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+</style>
 {% endif %}
-{% addtoblock 'js' %}<script type="text/javascript" src={% static 'cmsplugin_slick/slick.js' %}></script>{% endaddtoblock %}
-{% addtoblock 'js' %}
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#carousel-slick-{{ instance.id }}').slick({{ slick_settings|safe }});
 	});
 </script>
-{% endaddtoblock %}
+{% endspaceless %}
