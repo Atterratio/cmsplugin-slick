@@ -20,7 +20,7 @@ requirements = [
 
 setup(
     name='cmsplugin-slick',
-    version='0.2.2',
+    version='0.2.3',
     description='Django-CMS plugin for slick carousel',
     long_description='',
     author='Alexander Paramonov',
@@ -43,7 +43,6 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: OSI Approved :: GNU Lesser General Public License v3 or later',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
