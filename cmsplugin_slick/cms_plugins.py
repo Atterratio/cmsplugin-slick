@@ -31,7 +31,7 @@ class CarouselPlugin(CMSPluginBase):
 
     model = Carousel
     render_template = "cmsplugin_slick/carousel.djhtml"
-    module = 'Slick Carousel'
+    module = _('Slick Carousel')
     name = _('Slick Carousel')
     allow_children = True
     inlines = [CarouselBreakpointInline, ]

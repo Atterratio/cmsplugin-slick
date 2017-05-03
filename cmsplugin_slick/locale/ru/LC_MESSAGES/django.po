@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-29 01:50+0300\n"
+"POT-Creation-Date: 2017-05-04 00:46+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,39 +18,39 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: cms_plugins.py:35
+#: cms_plugins.py:34 cms_plugins.py:35
 msgid "Slick Carousel"
 msgstr "Слайдер Slick"
 
-#: cms_plugins.py:50 models.py:32
+#: cms_plugins.py:51 models.py:33
 msgid "Autoplay"
 msgstr "Автопролистывание"
 
-#: cms_plugins.py:57
+#: cms_plugins.py:58
 msgid "Others Settings"
 msgstr "Другие настройки"
 
-#: cms_plugins.py:66
+#: cms_plugins.py:67
 msgid "Advanced"
 msgstr "Продвинутые настройки"
 
-#: cms_plugins.py:72
+#: cms_plugins.py:73
 msgid "Breakpoint Settings"
 msgstr "Настройки брейкпоинтов"
 
-#: cms_plugins.py:192
+#: cms_plugins.py:193
 msgid "Slide Wrapper"
 msgstr "Слайд"
 
-#: cms_plugins.py:202
+#: cms_plugins.py:203
 msgid "Image Folder Carousel"
 msgstr "Слайдер для папки с изображениями"
 
-#: cms_plugins.py:213
+#: cms_plugins.py:214
 msgid "Image resizing options"
 msgstr "Опции изменения размеров изображения"
 
-#: models.py:17 models.py:68
+#: models.py:17 models.py:69
 msgid "Carousel"
 msgstr "Слайдер"
 
@@ -58,7 +58,7 @@ msgstr "Слайдер"
 msgid "Carousels"
 msgstr "Слайдеры"
 
-#: models.py:20 models.py:98
+#: models.py:20 models.py:99
 msgid "Title"
 msgstr "Заголовок"
 
@@ -74,127 +74,131 @@ msgstr "Зациклить"
 msgid "Speed"
 msgstr "Скорость"
 
-#: models.py:25
+#: models.py:24 models.py:115
+msgid "height"
+msgstr "высота"
+
+#: models.py:26
 msgid "Dots"
 msgstr "Точки"
 
-#: models.py:26
+#: models.py:27
 msgid "Arrows"
 msgstr "Стрелки"
 
-#: models.py:28 models.py:70
+#: models.py:29 models.py:71
 msgid "Slides to show"
 msgstr "Сколько слайдов отобразить"
 
-#: models.py:29 models.py:71
+#: models.py:30 models.py:72
 msgid "Slides to scroll"
 msgstr "Сколько слайдов прокручивать"
 
-#: models.py:33
+#: models.py:34
 msgid "Autoplay speed"
 msgstr "Скорость автопролистывания"
 
-#: models.py:35
+#: models.py:36
 msgid "Pause on hover"
 msgstr "Остановить при наведении"
 
-#: models.py:36
+#: models.py:37
 msgid "Pause on dots hover"
 msgstr "Остановить при наведении на точки"
 
-#: models.py:39
+#: models.py:40
 msgid "Fade animation"
 msgstr "Затухающая анимация"
 
-#: models.py:41
+#: models.py:42
 msgid "Center mode"
 msgstr "Режим центрирования"
 
-#: models.py:42
+#: models.py:43
 msgid "Center padding"
 msgstr "Центрировать внутренние оступы (padding)"
 
-#: models.py:44
+#: models.py:45
 msgid "Variable Width"
 msgstr "Различающаяся ширина слайдов"
 
-#: models.py:46
+#: models.py:47
 msgid "Vertical"
 msgstr "Вертикальный"
 
-#: models.py:47
+#: models.py:48
 msgid "Right to left"
 msgstr "Справа налево (RTL)"
 
-#: models.py:51 models.py:79
+#: models.py:52 models.py:80
 msgid "Css classes"
 msgstr "CSS-классы"
 
-#: models.py:52
+#: models.py:53
 msgid "Auto Breakpoints"
 msgstr "Авторасставление брейкпоинтов"
 
-#: models.py:55
+#: models.py:56
 msgid "Mobile First"
 msgstr "Mobile First"
 
-#: models.py:56
+#: models.py:57
 msgid "Responsive settings use mobile first calculation"
 msgstr "Настройки адаптивности используют отсчёт от Mobile First"
 
-#: models.py:69
+#: models.py:70
 msgid "Breakpoint resolution"
 msgstr "Разрешение брейкпоинта"
 
-#: models.py:74
+#: models.py:75
 msgid "Carousel Breakpoint"
 msgstr "Брейкпоинт слайдера"
 
-#: models.py:75
+#: models.py:76
 msgid "Carousel Breakpoints"
 msgstr "Брейкпоинты слайдера"
 
-#: models.py:82
+#: models.py:83
 msgid "Carousel Slide"
 msgstr "Слайд"
 
-#: models.py:83
+#: models.py:84
 msgid "Carousel Slides"
 msgstr "Слайды"
 
-#: models.py:90
+#: models.py:91
 msgid "left"
 msgstr "левое"
 
-#: models.py:91
+#: models.py:92
 msgid "right"
 msgstr "правое"
 
-#: models.py:92
+#: models.py:93
 msgid "center"
 msgstr "по центру"
 
-#: models.py:102
+#: models.py:103
 msgid "Style"
 msgstr "Стиль"
 
-#: models.py:104
+#: models.py:105
 msgid "alt text"
 msgstr "Текст"
 
-#: models.py:106
+#: models.py:107
 msgid "use the original image"
 msgstr "Использовать оригинальное изображение"
 
-#: models.py:107
+#: models.py:108
 msgid "do not resize the image. use the original image instead."
 msgstr "не менять размер изображения, использовать оригинал"
 
-#: models.py:109
+#: models.py:110
 msgid "thumbnail option"
 msgstr "опция миниатюры"
 
-#: models.py:110
+#: models.py:111
 msgid ""
 "overrides width, height, crop and upscale with values from the selected "
 "thumbnail option"
@@ -202,38 +206,34 @@ msgstr ""
 "переопределяет ширину, высоту, кадрирование и масштабирование значениями из "
 "выбранной опции"
 
-#: models.py:111
+#: models.py:112
 msgid "use automatic scaling"
 msgstr "использовать автоматическое масштабирование"
 
-#: models.py:112
+#: models.py:113
 msgid "tries to auto scale the image based on the placeholder context"
 msgstr "попытка масштабировать изображение, основываясь на контексте слота"
 
-#: models.py:113
+#: models.py:114
 msgid "width"
 msgstr "ширина"
 
-#: models.py:114
-msgid "height"
-msgstr "высота"
-
-#: models.py:115
+#: models.py:116
 msgid "crop"
 msgstr "обрезать"
 
-#: models.py:116
+#: models.py:117
 msgid "upscale"
 msgstr "увеличивать"
 
-#: models.py:158
+#: models.py:159
 msgid "<empty>"
 msgstr "<пустой>"
 
-#: models.py:161
+#: models.py:162
 msgid "Carousel Image Folder"
 msgstr "Слайдер для папки с изображениями"
 
-#: models.py:162
+#: models.py:163
 msgid "Image Folder Carousels"
 msgstr "Слайдеры для папки с изображениями"

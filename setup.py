@@ -20,7 +20,7 @@ requirements = [
 
 setup(
     name='cmsplugin-slick',
-    version='0.2.3',
+    version='0.2.4',
     description='Django-CMS plugin for slick carousel',
     long_description='',
     author='Alexander Paramonov',
