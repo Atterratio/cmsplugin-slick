@@ -1,0 +1,9 @@
+{% load cms_tags sekizai_tags staticfiles %}
+
+<div class="slick-slide-wrapper col-xs-12 {{ instance.classes }}">
+    <div class="thumbnail">
+        {% for plugin in instance.child_plugin_instances %}
+            {% render_plugin plugin %}
+        {% endfor %}
+    </div>
+</div>

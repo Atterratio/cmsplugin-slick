@@ -1,0 +1,6 @@
+{
+    "package-name": "cmsplugin-slick",
+    "installed-apps": [
+        "cmsplugin_slick"
+    ]
+}

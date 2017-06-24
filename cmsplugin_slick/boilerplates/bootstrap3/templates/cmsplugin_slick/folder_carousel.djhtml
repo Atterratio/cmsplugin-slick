@@ -1,0 +1,84 @@
+{% load sekizai_tags %}
+
+{% for image in folder_images %}
+    <div class="slick-slide-wrapper col-xs-12 {{ instance.classes }}">
+        <div class="thumbnail">
+            <div class="slick-slide-image-wrapper img-rounded">
+                {%  if instance.original_link %}
+                    <a id="carousel-slick-folder-link-{{ instance.id }}"
+                        data-toggle="modal" 
+                        data-target="#carousel-slick-folder-image-modal-{{ instance.id }}" 
+                        data-title="{% if image.default_caption %}{{ image.default_caption }}{% else %}{{ image }}{% endif %}"
+                        data-src="{{ image.url }}"
+                        data-desc="{% if image.description %}{{ image.description }}{% endif %}">
+                        {% include "cmsplugin_slick/includes/image_slide.djhtml" %}
+                    </a>
+                {% else %}
+                        {% include "cmsplugin_slick/includes/image_slide.djhtml" %}
+                {% endif %}
+                {% if instance.caption %}
+                    <div class="slick-slide-caption text-center">
+                        <h4>{% if image.default_caption %}{{ image.default_caption }}{% else %}{{ image }}{% endif %}</h4>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% addtoblock "css" %}
+<div id="carousel-slick-folder-image-modal-{{ instance.id }}" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                {% if instance.target_blank %}
+                    <a href="" target="_blank" class="thumbnail">
+                        <img
+                            class="filer_image img-rounded center-block img-responsive"
+                            src=""
+                            alt=""
+                            title=""
+                        >
+                    </a>
+                {% else %}
+                    <div class="thumbnail">
+                        <img
+                            class="filer_image img-rounded center-block img-responsive"
+                            src=""
+                            alt=""
+                            title=""
+                        >
+                    </div>
+                {% endif %}
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+{% endaddtoblock %}
+
+{% addtoblock 'js' %}
+    <script>
+        $('#carousel-slick-folder-image-modal-{{ instance.id }}').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            var title = button.data('title')
+            var src = button.data('src')
+            var desc = button.data('desc')
+            
+            var modal = $(this)
+            modal.find('.modal-title').text(title)
+            {% if instance.target_blank %}
+                modal.find('.modal-body a').attr("href", src)
+            {% endif %}
+            modal.find('.modal-body img').attr("src", src)
+            modal.find('.modal-body img').attr("alt", title)
+            modal.find('.modal-body img').attr("title", title)
+            modal.find('.modal-footer').text(desc)
+        });
+    </script>
+{% endaddtoblock %}

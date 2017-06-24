@@ -1,0 +1,18 @@
+{% load thumbnail %}
+
+{% if instance.thumbnail %}
+    {% thumbnail image opts.size crop=opts.crop upscale=opts.upscale subject_location=image.subject_location as thumb %}
+    <img
+        class="slick-folder-image center-block{% if instance.autoscale %} img-responsive{% endif %}"
+        src="{{ thumb.url }}"
+        alt="{% if image.default_alt_text %}{{ image.default_alt_text }}{% else %}{{ image }}{% endif %}"
+        title="{% if image.default_caption %}{{ image.default_caption }}{% else %}{{ image }}{% endif %}"
+    >
+{% else %}
+    <img
+        class="slick-folder-image center-block{% if instance.autoscale %} img-responsive{% endif %}"
+        src="{{ image.url }}"
+        alt="{% if image.default_alt_text %}{{ image.default_alt_text }}{% else %}{{ image }}{% endif %}"
+        title="{% if image.default_caption %}{{ image.default_caption }}{% else %}{{ image }}{% endif %}"
+    >
+{% endif %}

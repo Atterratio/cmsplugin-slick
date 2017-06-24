@@ -1,0 +1,4 @@
+[run]
+plugins = django_coverage_plugin
+source = cmsplugin_slick
+omit = cmsplugin_slick/tests/*, cmsplugin_slick/migrations/*
