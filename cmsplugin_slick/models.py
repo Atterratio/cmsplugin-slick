@@ -180,7 +180,8 @@ class SlickCarouselBreakpoint(models.Model):
 
 
 class SlickCarouselWrappedSlide(CMSPlugin):
-    title = models.CharField(_("Title"), max_length=128, null=True, blank=True)
+    title = models.CharField(_("Plugin title"), max_length=128, blank=True)
+    caption = models.CharField(_("Content caption"), max_length=256, blank=True)
     classes = models.TextField(verbose_name=_('CSS classes'), blank=True)
 
     def __str__(self):
@@ -225,7 +226,7 @@ class SlickCarouselFolderImages(CMSPlugin):
     #Advanced
     ORDERED_BY_CHOUSE =(
         ('id', _('ID')),
-        ('original_filename', _('Filename')),
+        ('original_filename', _('File name')),
         ('uploaded_at', _('Uploadet at')),
         ('modified_at', _('Modified at')),
     )

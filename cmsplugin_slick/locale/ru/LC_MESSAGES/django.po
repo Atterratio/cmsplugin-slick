@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-25 02:42+0300\n"
-"PO-Revision-Date: 2017-06-25 02:45+0300\n"
+"POT-Creation-Date: 2017-06-25 12:38+0300\n"
+"PO-Revision-Date: 2017-06-25 12:39+0300\n"
 "Last-Translator: Aeternus Atterratio <atterratio@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru_RU\n"
@@ -29,8 +29,8 @@ msgid "Responce options"
 msgstr "Настройки гибкого интерфейса"
 
 #: cmsplugin_slick/admin.py:35 cmsplugin_slick/admin.py:64
-#: cmsplugin_slick/cms_plugins.py:40 cmsplugin_slick/cms_plugins.py:155
-#: cmsplugin_slick/cms_plugins.py:192
+#: cmsplugin_slick/cms_plugins.py:40 cmsplugin_slick/cms_plugins.py:156
+#: cmsplugin_slick/cms_plugins.py:194
 msgid "Advanced options"
 msgstr "Дополнительные настройки"
 
@@ -39,31 +39,30 @@ msgid "Django-CMS plugin for Slick carousel"
 msgstr "Django-CMS плагин для слайдера Slick"
 
 #: cmsplugin_slick/cms_plugins.py:28 cmsplugin_slick/cms_plugins.py:29
-#: cmsplugin_slick/cms_plugins.py:144 cmsplugin_slick/cms_plugins.py:170
+#: cmsplugin_slick/cms_plugins.py:144 cmsplugin_slick/cms_plugins.py:171
 #: cmsplugin_slick/models.py:41
 msgid "Slick Carousel"
 msgstr "Слайдер Slick"
 
-#: cmsplugin_slick/cms_plugins.py:145 cmsplugin_slick/models.py:193
+#: cmsplugin_slick/cms_plugins.py:145 cmsplugin_slick/models.py:194
 msgid "Wrapped Slide"
 msgstr "Слайд обёртка"
 
-#: cmsplugin_slick/cms_plugins.py:171 cmsplugin_slick/models.py:236
-#| msgid "Carousels Image Folders"
+#: cmsplugin_slick/cms_plugins.py:172 cmsplugin_slick/models.py:251
 msgid "Carousel Folder Images"
 msgstr "Слайдер для изображений из папки"
 
-#: cmsplugin_slick/cms_plugins.py:181
+#: cmsplugin_slick/cms_plugins.py:183
 msgid "Image thumbnail options"
 msgstr "Опции миниатюр"
 
-#: cmsplugin_slick/cms_plugins.py:187
+#: cmsplugin_slick/cms_plugins.py:189
 msgid "Link options"
 msgstr "Опции ссылки"
 
 #: cmsplugin_slick/models.py:12 cmsplugin_slick/models.py:46
 #: cmsplugin_slick/models.py:112 cmsplugin_slick/models.py:131
-#: cmsplugin_slick/models.py:183 cmsplugin_slick/models.py:198
+#: cmsplugin_slick/models.py:199
 msgid "Title"
 msgstr "Заголовок"
 
@@ -75,8 +74,8 @@ msgstr "Готовая настройка"
 msgid "Breakpoints"
 msgstr "Точки разрыва"
 
-#: cmsplugin_slick/models.py:32 cmsplugin_slick/models.py:184
-#: cmsplugin_slick/models.py:225
+#: cmsplugin_slick/models.py:32 cmsplugin_slick/models.py:185
+#: cmsplugin_slick/models.py:240
 msgid "CSS classes"
 msgstr "CSS-классы"
 
@@ -222,44 +221,81 @@ msgstr "Точка разрыва слайдера"
 msgid "Slick Carousels Breakpoints"
 msgstr "Точки разрывов слайдеров"
 
-#: cmsplugin_slick/models.py:194
+#: cmsplugin_slick/models.py:183
+msgid "Plugin title"
+msgstr "Название плагина"
+
+#: cmsplugin_slick/models.py:184
+msgid "Content caption"
+msgstr "Подпись содержимого"
+
+#: cmsplugin_slick/models.py:195
 msgid "Wrapped Slides"
 msgstr "Слайды обёртки"
 
-#: cmsplugin_slick/models.py:203
+#: cmsplugin_slick/models.py:201
+#, fuzzy
+#| msgid "Advanced options"
+msgid "Add caption"
+msgstr "Дополнительные настройки"
+
+#: cmsplugin_slick/models.py:205
 msgid "Use automatic scaling"
 msgstr "Использовать автоматическое масштабирование"
 
-#: cmsplugin_slick/models.py:205
+#: cmsplugin_slick/models.py:207
 msgid "fit the image to the size of the container"
 msgstr "подгонять изображение под размер контейнера"
 
-#: cmsplugin_slick/models.py:208
+#: cmsplugin_slick/models.py:210
 msgid "Use thumbnails"
 msgstr "Использовать миниатюры"
 
-#: cmsplugin_slick/models.py:210
+#: cmsplugin_slick/models.py:212
 msgid "accelerate page load and save mobile traffic."
 msgstr "ускоряет загрузку страницы и сохраняет мобильный трафик"
 
-#: cmsplugin_slick/models.py:214
+#: cmsplugin_slick/models.py:216
 msgid "Thumbnail options"
 msgstr "Опции миниатюры"
 
-#: cmsplugin_slick/models.py:221
+#: cmsplugin_slick/models.py:223
 msgid "Link to original image"
 msgstr "Ссылка на оригинальное изображение"
 
-#: cmsplugin_slick/models.py:222
+#: cmsplugin_slick/models.py:224
 msgid "Open link in new window"
 msgstr "Открыть ссылку в новом окне"
 
-#: cmsplugin_slick/models.py:233
+#: cmsplugin_slick/models.py:228
+msgid "ID"
+msgstr "Идентификатор"
+
+#: cmsplugin_slick/models.py:229
+msgid "File name"
+msgstr "Имя файла"
+
+#: cmsplugin_slick/models.py:230
+msgid "Uploadet at"
+msgstr "Загружено"
+
+#: cmsplugin_slick/models.py:231
+msgid "Modified at"
+msgstr "Обновлено"
+
+#: cmsplugin_slick/models.py:234
+msgid "Ordered by"
+msgstr "Сортировать по"
+
+#: cmsplugin_slick/models.py:239
+msgid "Reverse order"
+msgstr "Обратный порядок"
+
+#: cmsplugin_slick/models.py:248
 msgid "<empty>"
 msgstr "<пустой>"
 
-#: cmsplugin_slick/models.py:237
-#| msgid "Carousels Image Folders"
+#: cmsplugin_slick/models.py:252
 msgid "Carousels Folders Images"
 msgstr "Слайдеры для изображений из папок"
 

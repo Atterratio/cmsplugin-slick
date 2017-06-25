@@ -150,6 +150,7 @@ class SlickCarouselWrappedSlidePlugin(CMSPluginBase):
         (None, {
             'fields': [
                 'title',
+                'caption',
             ]
         }),
         (_('Advanced options'), {
