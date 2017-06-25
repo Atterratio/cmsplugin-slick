@@ -4,6 +4,8 @@ from cmsplugin_slick import __version__
 REQUIREMENTS = [
     'django-cms>=3.3.0',
     'django>=1.7.0',
+    'cmsplugin-filer'
+
 ]
 
 CLASSIFIERS = [
