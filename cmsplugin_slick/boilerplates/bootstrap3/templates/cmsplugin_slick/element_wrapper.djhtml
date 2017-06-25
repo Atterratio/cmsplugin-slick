@@ -7,7 +7,7 @@
                 {% render_plugin plugin %}
             {% endfor %}
             {% if instance.caption %}
-                <div class="slick-slide-caption">
+                <div class="slick-slide-caption text-center">
                     <h4>{{ instance.caption }}</h4>
                 </div>
             {% endif %}
