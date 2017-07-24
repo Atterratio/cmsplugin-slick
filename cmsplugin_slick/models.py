@@ -150,13 +150,12 @@ class SlickCarouselBreakpoint(models.Model):
     )
 
     def __str__(self):
-        str = '{breakpoint}, {slides_to_show}, {slides_to_scroll}'.format(**self.__dict__)
-
         if self.title:
-            str = '{title}: {str}'.format(**{'str': str}, **self.__dict__)
+            str = '{title}: {breakpoint}, {slides_to_show}, {slides_to_scroll}'.format(**self.__dict__)
+        else:
+            str = '{breakpoint}, {slides_to_show}, {slides_to_scroll}'.format(**self.__dict__)
 
         advanced = ('dots', 'arrows', 'center_mode', 'center_padding', 'autoplay', 'autoplay_speed')
-        print(any(self.__dict__[name] for name in advanced))
         if any(self.__dict__[name] for name in advanced):
             advanced_str = ''
             for key in advanced:
@@ -168,8 +167,7 @@ class SlickCarouselBreakpoint(models.Model):
             advanced_str = advanced_str.strip(' ;')
 
             str = '{str}; Advanced({advanced_str})'.format(
-                **{'str': str, 'advanced_str': advanced_str},
-                **self.__dict__
+                **{'str': str, 'advanced_str': advanced_str}
             )
 
         return str

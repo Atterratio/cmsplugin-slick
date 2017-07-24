@@ -16,6 +16,13 @@ Slick_ carousel plugin fo Django-CMS
 .. image:: https://img.shields.io/badge/Donate-YaMoney-orange.svg
    :target: https://money.yandex.ru/to/410011005689134
 
+REQUIREMENTS
+============
+
+* *Python >= 3.3*
+* *Django >= 1.8*
+* *Django-CMS >=3.3*
+
 INSTALLATION
 ============
 
