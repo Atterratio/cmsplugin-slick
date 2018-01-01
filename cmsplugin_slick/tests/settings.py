@@ -1,9 +1,6 @@
 import os, sys
 gettext = lambda s: s
-try:
-    DJANGO_VERSION = os.environ['DJANGO_VERSION']
-except:
-    DJANGO_VERSION = "1.10.*"
+import django
 
 DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 """
@@ -31,7 +28,7 @@ sys.path.append(BASE_DIR)
 SECRET_KEY = 'tests_secret_key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -64,24 +61,24 @@ STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
-if DJANGO_VERSION == "1.10.*":
+if django.VERSION[1] < 10:
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR, 'cmsplugin_yandex_maps', 'tests'),],
+            'DIRS': [os.path.join(BASE_DIR, 'cmsplugin_slick', 'tests'),],
             'OPTIONS': {
                 'debug': True,
                 'context_processors': [
                     'django.contrib.auth.context_processors.auth',
         'django.contrib.messages.context_processors.messages',
-        'django.template.context_processors.i18n',
-        'django.template.context_processors.debug',
-        'django.template.context_processors.request',
-        'django.template.context_processors.media',
-        'django.template.context_processors.csrf',
-        'django.template.context_processors.tz',
+        'django.core.context_processors.i18n',
+        'django.core.context_processors.debug',
+        'django.core.context_processors.request',
+        'django.core.context_processors.media',
+        'django.core.context_processors.csrf',
+        'django.core.context_processors.tz',
         'sekizai.context_processors.sekizai',
-        'django.template.context_processors.static',
+        'django.core.context_processors.static',
         'cms.context_processors.cms_settings'
                 ],
                 'loaders': [
@@ -96,20 +93,20 @@ else:
     TEMPLATES = [
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [os.path.join(BASE_DIR, 'cmsplugin_yandex_maps', 'tests'),],
+            'DIRS': [os.path.join(BASE_DIR, 'cmsplugin_slick', 'tests'),],
             'OPTIONS': {
                 'debug': True,
                 'context_processors': [
                     'django.contrib.auth.context_processors.auth',
         'django.contrib.messages.context_processors.messages',
-        'django.core.context_processors.i18n',
-        'django.core.context_processors.debug',
-        'django.core.context_processors.request',
-        'django.core.context_processors.media',
-        'django.core.context_processors.csrf',
-        'django.core.context_processors.tz',
+        'django.template.context_processors.i18n',
+        'django.template.context_processors.debug',
+        'django.template.context_processors.request',
+        'django.template.context_processors.media',
+        'django.template.context_processors.csrf',
+        'django.template.context_processors.tz',
         'sekizai.context_processors.sekizai',
-        'django.core.context_processors.static',
+        'django.template.context_processors.static',
         'cms.context_processors.cms_settings'
                 ],
                 'loaders': [
@@ -134,6 +131,13 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware'
+)
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters'
 )
 
 INSTALLED_APPS = (
