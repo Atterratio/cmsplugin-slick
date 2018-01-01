@@ -50,6 +50,7 @@ class SlickCarouselPlugin(CMSPluginBase):
             context, instance, placeholder)
         
         slick_dict = {'slide': ':not(template)'}
+        breakpoints = {}
         if instance.slick_preset:
             slick_dict.update({
                 'infinite': instance.slick_preset.infinite,
@@ -78,7 +79,7 @@ class SlickCarouselPlugin(CMSPluginBase):
         if instance.breakpoints:
             breakpoints, responsive = self._get_breakpoints(instance)
             slick_dict.update({'responsive': responsive})
-        
+
         breakpoints = json.dumps(breakpoints)
         slick_settings = json.dumps(slick_dict)
 
