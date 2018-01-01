@@ -12,7 +12,7 @@ Slick_ carousel plugin fo Django-CMS
 .. _Slick: http://kenwheeler.github.io/slick/
 
 .. image:: https://img.shields.io/badge/Donate-PayPal-blue.svg
-   :target: https://www.paypal.me/Atterratio
+   :target: https://paypal.me/AeternusAtterratio
 .. image:: https://img.shields.io/badge/Donate-YaMoney-orange.svg
    :target: https://money.yandex.ru/to/410011005689134
 
