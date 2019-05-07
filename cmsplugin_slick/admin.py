@@ -25,7 +25,7 @@ class SlickCarouselPresetAdmin(admin.ModelAdmin):
                 ('pause_on_hover', 'pause_on_dots_hover'),
             )
         }),
-        (_('Responce options'), {
+        (_('Response options'), {
             'classes': ('collapse',),
             'fields': (
                 'mobile_first',
@@ -37,10 +37,9 @@ class SlickCarouselPresetAdmin(admin.ModelAdmin):
             'fields': (
                 'fade',
                 ('rows', 'slides_per_row'),
-                ('center_mode', 'center_padding'),
                 ('variable_width', 'adaptive_height'),
                 ('vertical', 'rigth_to_left'),
-                ('use_theme', 'slick_theme'),
+                'use_theme',
             )
         }),
     )
