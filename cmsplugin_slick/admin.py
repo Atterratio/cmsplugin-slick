@@ -25,7 +25,7 @@ class SlickCarouselPresetAdmin(admin.ModelAdmin):
                 ('pause_on_hover', 'pause_on_dots_hover'),
             )
         }),
-        (_('Responce options'), {
+        (_('Response options'), {
             'classes': ('collapse',),
             'fields': (
                 'mobile_first',
